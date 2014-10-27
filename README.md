@@ -1,7 +1,7 @@
 HamaryuginhMeekroDbBundle
 =========================
 
-A symfony2 bundle for [MeekroDB](http://www.meekro.com/index.php).
+A symfony2 bundle for [MeekroDB](http://www.meekro.com/index.php){:target="_blank"}.
 
 Installation
 ------------
