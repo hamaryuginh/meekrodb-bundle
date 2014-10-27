@@ -26,16 +26,16 @@ php composer.phar install
 Enable the bundle in the kernel
 
 ``` php
-    <?php
-    // app/AppKernel.php
+<?php
+// app/AppKernel.php
 
-    public function registerBundles()
-    {
-        $bundles = array(
-            // ...
-            new Hamaryuginh\MeekroDbBundle\HamaryuginhMeekroDbBundle(),
-        );
-    }
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new Hamaryuginh\MeekroDbBundle\HamaryuginhMeekroDbBundle(),
+    );
+}
 ```
 
 Configuration
@@ -65,11 +65,11 @@ Use
 ---
 
 ``` php
-    <?php
-    // In a controller
+<?php
+// In a controller
 
-    $dbManager = $this->get('hamaryuginh.meekro_db');
-    $myDbHost  = $dbManager->get('my_db_host'); // The name of the connection
-    $account   = $myDbHost->query("SELECT * FROM accounts WHERE username=%s", 'Joe');
+$dbManager = $this->get('hamaryuginh.meekro_db');
+$myDbHost  = $dbManager->get('my_db_host'); // The name of the connection
+$account   = $myDbHost->query("SELECT * FROM accounts WHERE username=%s", 'Joe');
 ```
 
