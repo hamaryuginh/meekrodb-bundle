@@ -1,0 +1,26 @@
+{
+    "name" : "hamaryuginh/meekrodb-bundle",
+    "description" : "A Symfony2 Bundle for MeekroDB",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "hamaryuginh",
+        "email" : "hamaryuginh@gmail.com"
+    }],
+    "homepage": "https://github.com/hamaryuginh/meekrodb-bundle",
+    "keywords" : ["meekrodb", "bundle", "database", "db", "symfony2", "select", "insert", "update", "delete"],
+    "license" : ["MIT"],
+    "require" : {
+        "symfony/http-foundation": ">=2.1,<2.7-dev",
+        "symfony/config": ">=2.1,<2.7-dev",
+        "sergeytsalkov/meekrodb": "*"
+    },
+    "autoload" : {
+        "psr-0" : { "Hamaryuginh\\MeekroDbBundle" : "" }
+    },
+    "target-dir" : "Hamaryuginh/MeekroDbBundle",
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "0.1.0-dev"
+        }
+    }
+}
