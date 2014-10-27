@@ -20,9 +20,24 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('hamaryuginh_meekro_db');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->arrayNode('meekrodb')
+                    ->children()
+                        ->arrayNode('connections')
+                            ->prototype('array')
+                                ->children()
+                                    ->scalarNode('host')->defaultValue('localhost')->end()
+                                    ->integerNode('port')->defaultValue(3306)->end()
+                                    ->scalarNode('db_name')->isRequired()->end()
+                                    ->scalarNode('user')->isRequired()->end()
+                                    ->scalarNode('password')->defaultValue('')->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

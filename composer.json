@@ -10,6 +10,7 @@
     "keywords" : ["meekrodb", "bundle", "database", "db", "symfony2", "select", "insert", "update", "delete"],
     "license" : ["MIT"],
     "require" : {
+        "php": ">=5.3.2",
         "symfony/http-foundation": ">=2.1,<2.7-dev",
         "symfony/config": ">=2.1,<2.7-dev",
         "sergeytsalkov/meekrodb": "*"
@@ -20,7 +21,7 @@
     "target-dir" : "Hamaryuginh/MeekroDbBundle",
     "extra" : {
         "branch-alias" : {
-            "dev-master" : "0.1.0-dev"
+            "dev-master" : "1.0.x-dev"
         }
     }
 }
