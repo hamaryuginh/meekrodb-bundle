@@ -25,6 +25,7 @@ php composer.phar install
 
 Enable the bundle in the kernel
 
+``` php
     <?php
     // app/AppKernel.php
 
@@ -35,6 +36,7 @@ Enable the bundle in the kernel
             new Hamaryuginh\MeekroDbBundle\HamaryuginhMeekroDbBundle(),
         );
     }
+```
 
 Configuration
 -------------
@@ -62,10 +64,12 @@ Now you're all set, you can now use the bundle as following:
 Use
 ---
 
+``` php
     <?php
     // In a controller
 
     $dbManager = $this->get('hamaryuginh.meekro_db');
     $myDbHost  = $dbManager->get('my_db_host'); // The name of the connection
     $account   = $myDbHost->query("SELECT * FROM accounts WHERE username=%s", 'Joe');
+```
 
