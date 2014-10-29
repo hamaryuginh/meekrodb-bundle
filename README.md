@@ -52,6 +52,7 @@ hamaryuginh_meekro_db:
             my_db_host_1:
                 host:     database_host # default value is "localhost"
                 port:     6666          # default value is 3306
+                encoding: utf8          # default value is utf8
                 db_name:  database_name
                 user:     database_user
                 password: user_password # default value is ""

@@ -17,13 +17,14 @@ class MDBFactory
     /**
      * @param $host
      * @param $port
+     * @param $encoding
      * @param $dbName
      * @param $user
      * @param $password
      * @return MeekroDBConnection
      */
-    public function createConnection($host, $port, $dbName, $user, $password)
+    public function createConnection($host, $port, $encoding, $dbName, $user, $password)
     {
-        return new MeekroDBConnection($host, $port, $dbName, $user, $password);
+        return new MeekroDBConnection($host, $port, $encoding,$dbName, $user, $password);
     }
 } 

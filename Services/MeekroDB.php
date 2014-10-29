@@ -69,6 +69,7 @@ class MeekroDB
             $this->connections[$connectionName] = $this->factory->createConnection(
                 $connectionConfig['host'],
                 $connectionConfig['port'],
+                $connectionConfig['encoding'],
                 $connectionConfig['db_name'],
                 $connectionConfig['user'],
                 $connectionConfig['password']

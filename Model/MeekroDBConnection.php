@@ -53,6 +53,8 @@ class MeekroDBConnection
     private $host;
     /** @var int $port */
     private $port;
+    /** @var string $encoding */
+    private $encoding;
     /** @var string $dbName */
     private $dbName;
     /** @var string $user */
@@ -63,14 +65,16 @@ class MeekroDBConnection
     /**
      * @param string $host
      * @param int    $port
+     * @param string $encoding
      * @param string $dbName
      * @param string $user
      * @param string $password
      */
-    public function __construct($host, $port, $dbName, $user, $password)
+    public function __construct($host, $port, $encoding, $dbName, $user, $password)
     {
         $this->host     = $host;
         $this->port     = $port;
+        $this->encoding = $encoding;
         $this->dbName   = $dbName;
         $this->user     = $user;
         $this->password = $password;
@@ -101,6 +105,7 @@ class MeekroDBConnection
     {
         \DB::$host     = $this->host;
         \DB::$port     = $this->port;
+        \DB::$encoding = $this->encoding;
         \DB::$dbName   = $this->dbName;
         \DB::$user     = $this->user;
         \DB::$password = $this->password;

@@ -29,6 +29,7 @@ class Configuration implements ConfigurationInterface
                                 ->children()
                                     ->scalarNode('host')->defaultValue('localhost')->end()
                                     ->integerNode('port')->defaultValue(3306)->end()
+                                    ->scalarNode('encoding')->defaultValue('utf8')->end()
                                     ->scalarNode('db_name')->isRequired()->end()
                                     ->scalarNode('user')->isRequired()->end()
                                     ->scalarNode('password')->defaultValue('')->end()
